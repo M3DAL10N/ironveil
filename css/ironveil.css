@@ -1,0 +1,111 @@
+/* ============================================================
+   IRONVEIL THEME (black + gold) for the Titan template.
+   This is the ONLY file we edited on top of the template.
+   It loads after style.css, so anything here wins.
+
+   1. Colors and fonts   4. Shop items + tiles
+   2. Page + text        5. Forms
+   3. Navbar + buttons   6. Footer, notice pill, mobile
+   ============================================================ */
+
+/* ---------- 1. COLORS AND FONTS ---------- */
+:root {
+  --black: #070706; --coal: #100f0c; --line: #2a2412;
+  --gold: #c9a24b; --gold-light: #f4dfa0; --gold-dark: #6b5220;
+  --text: #ece5d3; --muted: #9a9482;
+  --display: "Cormorant Garamond", Georgia, serif;
+}
+
+/* ---------- 2. PAGE + TEXT ---------- */
+html, body, .main, .module, .module-small, .bg-white { background-color: var(--black); color: var(--text); }
+body { font-family: "Open Sans", Arial, sans-serif; }
+a { color: var(--gold); }
+a:hover, a:focus { color: var(--gold-light); text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { color: var(--text); }
+p { color: var(--muted); }
+hr.divider-w { border-color: var(--line); }
+section[id] { scroll-margin-top: 70px; }
+
+.module-title { font-family: var(--display); text-transform: none; letter-spacing: .03em; font-weight: 600; font-size: 46px; line-height: 1.1; color: var(--gold-light); }
+.module-subtitle, .font-serif { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--muted); }
+.font-alt { color: inherit; }
+.form h4.font-alt { color: var(--gold-light); }
+
+/* hero text */
+.iv-eyebrow { color: var(--gold); letter-spacing: .4em; font-size: 13px; font-weight: 700; }
+.iv-hero-title { font-family: var(--display); text-transform: none; letter-spacing: .01em; font-weight: 600; line-height: .98; font-size: 88px;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, var(--gold-dark)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.home-section .titan-title-size-1 { color: var(--text); }
+
+/* benefits strip */
+.iv-benefits { text-align: center; }
+.iv-benefits i { font-size: 26px; color: var(--gold); margin-bottom: 10px; }
+.iv-benefits h6 { margin: 0 0 4px; color: var(--text); }
+.iv-benefits p { margin: 0 0 20px; font-size: 13px; }
+
+/* statement band */
+.iv-statement .module-title { font-style: italic; font-size: 44px; text-transform: none; }
+.bg-dark-60:before { background: rgba(7, 7, 6, .55); }
+
+/* ---------- 3. NAVBAR + BUTTONS ---------- */
+.navbar-custom { background-color: rgba(7, 7, 6, .94); border-bottom: 1px solid rgba(201, 162, 75, .18); }
+.navbar-custom.navbar-transparent { background-color: transparent; border-bottom-color: transparent; }
+.navbar-custom .navbar-brand { font-family: var(--display); font-weight: 600; font-size: 28px; letter-spacing: .3em; color: var(--gold); }
+.navbar-custom .nav li > a { color: rgba(236, 229, 211, .75); }
+.navbar-custom .nav > li.active > a, .navbar-custom .nav > li > a:hover, .navbar-custom .nav > li > a:focus { color: var(--gold-light); background: none; }
+
+.btn.btn-b, .btn.btn-d, .btn.btn-g {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #120e04; border: 1px solid var(--gold); }
+.btn.btn-b:hover, .btn.btn-b:focus, .btn.btn-d:hover, .btn.btn-d:focus, .btn.btn-g:hover, .btn.btn-g:focus {
+  background: var(--gold-light); color: #120e04; border-color: var(--gold-light); box-shadow: 0 0 30px rgba(201, 162, 75, .35); }
+.btn.btn-border-w { border-color: rgba(236, 229, 211, .5); color: var(--text); background: transparent; }
+.btn.btn-border-w:hover, .btn.btn-border-w:focus { background: var(--gold); border-color: var(--gold); color: #120e04; }
+
+/* ---------- 4. SHOP ITEMS + CATEGORY TILES ---------- */
+.shop-item-image { background: var(--coal); border: 1px solid var(--line); transition: border-color .3s; }
+.shop-item:hover .shop-item-image { border-color: var(--gold); }
+.shop-item-image img { width: 100%; display: block; }
+.shop-item-detail { background: rgba(7, 7, 6, .55); }
+.shop-item { color: var(--gold-light); font-weight: 600; }
+.shop-item-title a { color: var(--text); }
+.shop-item-title a:hover { color: var(--gold); }
+
+.iv-tile { display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 3 / 4; padding: 24px; margin-bottom: 30px; border: 1px solid var(--line);
+  background: radial-gradient(circle at 25% 20%, rgba(201, 162, 75, .3), transparent 60%), var(--coal); transition: .35s; }
+.iv-tile:hover { border-color: var(--gold); transform: translateY(-6px); box-shadow: 0 25px 50px rgba(0, 0, 0, .6); }
+.iv-num { font-family: var(--display); font-size: 84px; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--gold-dark); }
+.iv-tile:hover .iv-num { -webkit-text-stroke-color: var(--gold-light); }
+.iv-name { font-family: var(--display); font-size: 36px; font-weight: 500; color: var(--text); line-height: 1; }
+.iv-go { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+
+.alt-features-icon { color: var(--gold); }
+.alt-features-title { color: var(--text); }
+
+/* ---------- 5. FORMS ---------- */
+.form-control, select.form-control { background: var(--coal); border: 1px solid var(--line); color: var(--text); border-radius: 0; box-shadow: none; }
+.form-control:focus { border-color: var(--gold); background: var(--coal); color: var(--text); box-shadow: none; }
+.form-control::placeholder { color: var(--muted); opacity: 1; }
+.iv-response { color: var(--gold-light); }
+.iv-note { text-align: center; color: var(--gold); border: 1px solid var(--gold-dark); padding: 12px 18px; margin-bottom: 40px; }
+
+/* ---------- 6. FOOTER, NOTICE PILL, MOBILE ---------- */
+.bg-dark, .footer.bg-dark, .module-small.bg-dark { background: var(--coal); color: var(--muted); }
+.widget-title { color: var(--text); }
+.icon-list li a, .widget a { color: var(--muted); }
+.icon-list li a:hover, .widget a:hover { color: var(--gold); }
+.footer .copyright { color: var(--muted); }
+.footer-social-links a { color: var(--muted); }
+.footer-social-links a:hover { color: var(--gold); }
+hr.divider-d { border-color: var(--line); }
+.scroll-up a { background: var(--gold); color: #120e04; }
+.page-loader { background: var(--black); }
+
+.iv-pill { position: fixed; left: 16px; bottom: 16px; z-index: 1001; background: var(--gold); color: #120e04; font: 700 11px/1 "Roboto Condensed", sans-serif; letter-spacing: .12em; text-transform: uppercase; padding: 9px 14px; }
+
+@media (max-width: 767px) {
+  .iv-hero-title { font-size: 48px; }
+  .module-title { font-size: 34px; }
+  .iv-statement .module-title { font-size: 28px; }
+  .iv-tile { aspect-ratio: 4 / 3; }
+  .navbar-custom { background-color: rgba(7, 7, 6, .97); }
+}
